@@ -42,6 +42,15 @@
       1000: {},
     },
   });
+
+  $(".cl-c-item__body").on("show.bs.collapse", function () {
+    let thisIs = $(this);
+    thisIs.parents(".cl-c-item").addClass("a-active");
+  });
+  $(".cl-c-item__body").on("hide.bs.collapse", function () {
+    let thisIs = $(this);
+    thisIs.parents(".cl-c-item").removeClass("a-active");
+  });
 })(jQuery);
 
 $(document).ready(function () {
