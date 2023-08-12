@@ -9,10 +9,18 @@
     justify-content: center;
     text-align: center;
     background: var(--theme__color1);
+    color: #fff;
     font-size: 16px;
     font-style: normal;
     font-weight: 600;
     letter-spacing: -0.176px;
+    transition: 0.3s;
+    border: 1px solid transparent;
+}
+.default-button:hover {
+    color: #fff;
+    background: #ff8000;
+    border-color: transparent;
 }
 .default-button .icon {
     font-size: 20px;
@@ -20,6 +28,19 @@
     display: flex;
     align-items: center;
 }
+
+.default-button--bordered {
+    border-color: var(--theme__color1);
+    color: var(--theme__color1);
+    background: transparent;
+}
+.default-button--bordered-lt {
+    border-color: #E0E0E0;
+    color: #0A0A0A;
+    background: transparent;
+}
+
+
 
 .default-button--min-lg {
     min-width: 240px;
