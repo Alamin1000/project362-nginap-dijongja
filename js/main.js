@@ -106,7 +106,8 @@
   });
   var owlGallery = $(".pvm-gallery-slider-active");
   owlGallery.owlCarousel({
-    loop: true,
+    loop: false,
+    center: false,
     margin: 0,
     items: 1,
     responsiveClass: true,
@@ -173,6 +174,25 @@
         enabled: true,
       },
     });
+  });
+
+  // share
+  document.addEventListener("DOMContentLoaded", function (e) {
+    let field = document.querySelector(".field");
+    let input = document.querySelector("input");
+    let copyBtn = document.querySelector(".field button");
+
+    copyBtn.onclick = () => {
+      input.select();
+      if (document.execCommand("copy")) {
+        field.classList.add("active");
+        copyBtn.innerText = "Copied";
+        setTimeout(() => {
+          field.classList.remove("active");
+          copyBtn.innerText = "Copy";
+        }, 3500);
+      }
+    };
   });
 })(jQuery);
 
